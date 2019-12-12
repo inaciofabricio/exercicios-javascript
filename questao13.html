@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 13</title>
+</head>
+<body>
+    <!--
+        Questão 13
+        Construa um script que imprime o tamanho da tela (largura e altura) após a página carregar e atualiza este valor a cada vez a tela é redimensionada.
+    -->
+    <div>
+        Largura: <span id="largura"></span>
+        <br>
+        Altura: <span id="altura"></span>
+    </div>
+
+    <script>
+        var largura = document.getElementById('largura');
+        var altura = document.getElementById('altura');
+
+        largura.innerHTML = window.innerWidth; 
+        altura.innerHTML = window.innerHeight;
+
+        window.onresize = function(){
+            largura.innerHTML = window.innerWidth; 
+            altura.innerHTML = window.innerHeight;
+        };
+
+    </script>
+</body>
+</html>

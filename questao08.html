@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 8</title>
+</head>
+<body>
+    <!--
+        Questão 8
+        Faça um script que altera a imagem abaixo quando o mouse passa sobre a mesma 
+    -->
+    <img id="img" height="50" src="https://www.unifacisa.edu.br/assets/imgs/logo.svg" alt="..." onmouseover="mouseOver()" onmouseout="mouseOut()">
+
+    <script>
+        var img = document.getElementById('img');
+
+        function mouseOver() {
+            img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm9pYzY1-5sfOPt0tDHzRQyXcu078jpS5GyMYZODLEth_12TBA&s';
+        }
+
+        function mouseOut() {
+            img.src = 'https://www.unifacisa.edu.br/assets/imgs/logo.svg';            
+        }
+    </script>
+</body>
+</html>

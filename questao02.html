@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 2</title>
+</head>
+<body>
+    <!--
+        Questão 2
+        Faça um script que troca a cor do texto de uma div quando o mouse passa sobre esta div e retorna a cor inicial quando o mouse saí da área da div.
+     -->
+
+    <div id="div" onmouseover="mouseOver()" onmouseout="mouseOut()">
+        Essa div deve trocar de cor quando o mouse passa em cima.
+    </div>
+
+     <script>
+        var div = document.getElementById('div');
+
+        function mouseOver() {
+            div.style.color = '#FF0000';
+        }
+
+        function mouseOut() {
+            div.style.color = '#000000';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Questão 15
+        Construa um script que valida um texto contido em um campo de texto, verificando se o mesmo contém o caracter '@' apenas uma vez. Se isto ocorrer, deve criar uma div com mensagem de errro, caso contrário, cria div com mensagem de sucesso.
+    -->
+    <input type="text" id="texto">
+    <button onclick="validar()">Validar</button><br>
+    <div id="div"></div>
+    
+    
+    <script>
+        var nome = document.getElementById('texto');
+        var div = document.getElementById('div');
+    
+        function validar() { 
+            var x = 0;
+            for (var i = 0; i < nome.value.length; i++) {
+             if(nome.value.charAt(i) == '@'){
+                x++;
+             }
+            }
+
+            if(x < 2){
+                div.innerHTML = 'Erro';
+            }else{
+                div.innerHTML = 'Sucesso';
+            }
+        }
+    </script>
+</body>
+</html>

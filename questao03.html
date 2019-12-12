@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 3</title>
+</head>
+<body>
+    <!--
+        Questão 3
+        Implemente um script que altera o texto de um campo de texto, deixando tudo com letras maiúsculas se o botão com rótulo "UPPERCASE" for pressionado e deixando tudo com letras minúsculas se o botão com rótulo "lowercase" for pressionado.
+    -->
+    <input type="text" id="texto"/> 
+    <button onclick="uppercase()">UPPERCASE</button>
+    <button onclick="lowercase()">lowercase</button>
+
+    <script>
+        var texto = document.getElementById('texto');
+        
+        function uppercase() {
+            texto.value = texto.value.toUpperCase();
+        }
+
+        function lowercase() {
+            texto.value = texto.value.toLowerCase();
+        }
+    </script>
+
+</body>
+</html>

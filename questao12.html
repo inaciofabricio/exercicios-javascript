@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 12</title>
+</head>
+<body>
+    <!--
+        Questão 12
+        Implemente um script que permite alterar a cor do texto da div com a cor escolhida de acordo com uma seleção em uma lista de cores.
+    -->
+
+    <div id="div">
+        Essa div deve mudar de cor
+
+        <select id="select" onchange="mudarCor()">
+            <option value="#FFFFFF"></option>
+            <option value="#FF0000">Vermelho</option>
+            <option value="#008000">Verde</option>
+            <option value="#0000FF">Azul</option>
+        </select>
+    </div>
+
+    
+
+    <script>
+        var div = document.getElementById('div');
+        var select = document.getElementById('select');
+                    
+        function mudarCor() {
+            div.style.color = select.value;
+        }
+
+    </script>
+</body>
+</html>

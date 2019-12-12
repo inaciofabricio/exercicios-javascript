@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 5</title>
+</head>
+<body>
+    <!--
+        Questão 5
+        Implemente um mecanismo de validação que verifica se um campo de texto contém um número e este número esta contido no intervalo entre 0 e 99. Se a validação falhar, criar uma div com as seguintes mensagens "Campo deve ser numérico" ou "O valor deve estar contido no intervalo entre 0 e 99", respectivamente. Não esqueça de remover a div se o valor for valido.
+    -->
+    <label >Campo numérico:</label>
+    <input type="text" id="texto"/>
+    <button onclick="valida()">Validar</button>
+
+    <div id="validacao"></div>
+
+    <script>
+        var texto = document.getElementById('texto');
+        var validacao = document.getElementById('validacao');
+        var textoValidacao = '';
+        
+        function valida() {
+            if(!isNaN(texto.value) || texto.value.lenght == 0){
+                validacao.innerHTML = '';
+                if(texto.value < 0 || texto.value > 99){
+                    validacao.innerHTML = 'O valor deve estar contido no intervalo entre 0 e 99';
+                }
+            }else{
+                validacao.innerHTML = 'Campo deve ser numérico';
+            }
+        }
+
+    </script>
+</body>
+</html>

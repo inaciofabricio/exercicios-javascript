@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 9</title>
+</head>
+<body>
+    <!--
+        Questão 8
+        Faça um script que altera a imagem abaixo quando o mouse passa sobre a mesma 
+    -->
+    <a href="#" onclick="zoomIn()">Zoom in</a>
+    <a href="#" onclick="zoomOut()">Zoom out</a>
+    <div id="div">Texto a ser redimensionado</div>
+
+    <script>
+        var div = document.getElementById('div');
+
+        function zoomIn() { 
+            div.style.fontSize = 'xx-large';
+        }
+
+        function zoomOut() {
+            div.style.fontSize = 'xx-small';
+        }
+    </script>
+</body>
+</html>

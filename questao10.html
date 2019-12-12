@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 10</title>
+</head>
+<body>
+    <!--
+        Questão 10
+        Construa um script que altera a cor do fundo para vermelho de um campo de texto quando o usuário edita o campo e o deixa sem texto.
+    -->
+
+    <input type="text" id="texto" onkeyup="verificar()"/>
+
+    <script>
+        var texto = document.getElementById('texto');
+                    
+        function verificar() {
+            
+            if(texto.value.length == 0){
+                    texto.style.background = '#FF0000';
+            }else{
+                    texto.style.background = '#FFFFFF';
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

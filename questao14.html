@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 14</title>
+</head>
+<body>
+    <!--
+        Questão 14
+        Faça um script que verifica se um formulário com três campos (um campo de texto, um grupo de radio com três opções e um checkbox) está completamente preenchido, se estiver submete os dados (pode ser para página não existente), caso contrário, cria mensagem de erro junto ao(s) campo(s) que necessita(m) ser preenchido(s).
+    -->
+    <div>
+        <form id="formulario" action="formulario.php">
+            <div>
+                <label for="">Qual o seu nome?</label><br>  
+                <input type="text" name="nome" id="nome" onchange="valida()"><br>
+                <br>
+            </div>
+            <div>
+                Qual a linguagem de programação que tem mais experiência? <br>
+                <input type="radio" name="linguagem" value="Python" onchange="valida()">Python<br>
+                <input type="radio" name="linguagem" value="Java" onchange="valida()">Java<br>
+                <input type="radio" name="linguagem" value="Javascript" onchange="valida()">Javascript<br>	
+                <br>
+            </div>
+            <div>
+                Sabe HTML? <input type="checkbox" name="html[]" id="html" onchange="valida()"><br>
+                <br>
+            </div>
+            <button type="submit" id="btn">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        var nome = document.getElementById('nome');
+        var linguagem = document.getElementsByName('linguagem');
+        var html = document.getElementsByName('html[]');
+        var btn = document.getElementById('btn');
+        btn.disabled = true;
+
+        var bloqueia = true;
+        
+        function valida(){
+            if(nome.value != null || nome.value != ''){
+                bloqueia = false;
+            }
+
+            var x = false;
+
+            linguagem.forEach(l => {
+                if(l.checked){
+                    x = true;
+                }
+                if(x){ 
+                    bloqueia = false; 
+                }else{
+                    bloqueia = true;
+                }
+            });
+
+            var y = false;
+
+            html.forEach(h => { 
+                if(h.checked){
+                    y = true;
+                }
+                if(y){
+                    bloqueia = false; 
+                }else{
+                    bloqueia = true;
+                }
+            });
+
+            if(!bloqueia){
+                btn.disabled = false;
+            }else{
+                btn.disabled = true;
+            }
+        }
+
+    </script>
+</body>
+</html>

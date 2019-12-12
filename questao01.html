@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 1</title>
+</head>
+<body>
+    <!--
+        Questão 1
+        Construa um script que esconde ou mostra a div ao pressionar um botão
+
+     -->
+
+     <button type="button" onclick="esconderMostarDiv()">Esconde/mostra texto</button>
+     <br><br>
+     <div id="div">Essa div deve sumir e aparecer</div>
+
+    <script>
+        function esconderMostarDiv() {
+           
+            var div = document.getElementById('div');
+
+            if(div.style.visibility != 'hidden'){
+                div.style.visibility = 'hidden';
+            }else{
+                div.style.visibility = 'visible';
+            }
+        }
+    </script>
+
+</body>
+</html>
